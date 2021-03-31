@@ -66,6 +66,10 @@
 
 
 
+
+{{ $errors->first('name')}}
+
+
     <div class="col-6">
          <h3>Inactive Customers</h3>
         <ul>
