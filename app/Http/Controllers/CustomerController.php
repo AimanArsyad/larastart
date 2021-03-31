@@ -11,11 +11,16 @@ class CustomerController extends Controller
     {
         $customers = Customer::all();
 
-        dd($customers);
+       
     
         return view('internals.customers', [
             'customers' => $customers,
         ]);
 
+    }
+
+    public function store()
+    {
+        dd(request('name'));    
     }
 }
