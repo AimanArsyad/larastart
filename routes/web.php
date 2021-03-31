@@ -20,5 +20,4 @@ Route::view('contact-us','contact');
 Route::view('about','about');
 
 Route::get('customers', 'CustomerController@list');
-Route::post('customers','CustomerController@store');
 
