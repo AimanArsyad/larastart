@@ -19,7 +19,7 @@
  
 </form>    
 
-{{ $error->first(name)}}
+{{ $errors->first('name')}}
 
 <ul>
     
