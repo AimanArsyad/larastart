@@ -1,27 +1,12 @@
-@extends('layout')
-
-@section('title','Add New Customer')
-
-
-@section('content')
-<div class="row">
-    <div class="col-12">
-        <h1>Add New Customer</h1>    
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-12">
-        <form action="/customers" method="POST">
-             <div class="form-group ">
+<div class="form-group ">
             <label for="name">Name</label>
-            <input type="text" name="name" value="{{old('name')}}" class="form-control">
+            <input type="text" name="name" value="{{old('name') ?? $customer->name}}" class="form-control">
             <div> {{ $errors->first('name')}} </div>  
         </div>   
     
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" name="email" value="{{old('email')}}" class="form-control">
+            <input type="text" name="email" value="{{old('email') ?? $customer->email}}" class="form-control">
             <div> {{ $errors->first('email')}} </div>  
         </div>  
 
@@ -44,14 +29,3 @@
         </div> 
 
 @csrf
-        <button type="submit" class="btn btn-primary">Add Customer</button>
-
- 
-        </form>    
-
-
-    </div>
-    
-</div>
-
-@endsection
