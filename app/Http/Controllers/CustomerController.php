@@ -28,6 +28,7 @@ class CustomerController extends Controller
 
     public function store()
     {
+        //dd(request()->all); 
         Customer::create($this->validateRequest());
 
         return redirect('customers');    
