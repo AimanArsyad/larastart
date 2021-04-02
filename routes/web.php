@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
 Route::view('/','welcome');
 
 Route::get('contact','ContactFormController@create');
@@ -30,3 +29,18 @@ Route::view('about','about');
 //Route::delete('customers/{customer}','CustomersController@destroy');
 
 Route::resource('customers','CustomerController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
