@@ -10,13 +10,12 @@
 </div>
 
 <div class="row">
-    <div class="col-12">
+    <div class="col-10">
         <form action="/customers" method="POST">
             @include('customers.form')
-
+          
             <button type="submit" class="btn btn-primary">Add Customer</button>
-
-            
+           
         </form>
     </div>
 </div>

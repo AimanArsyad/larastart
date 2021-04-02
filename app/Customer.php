@@ -32,7 +32,7 @@ class Customer extends Model
 
     public function company()
     {
-        return $this->belongsTo(Company::class);
+        return $this->belongsTo(Company::class); //one to many relationship with company
     }
     
     public function activeOptions()
