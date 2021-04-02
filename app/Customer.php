@@ -17,7 +17,8 @@ class Customer extends Model
     ];
 
     public function getActiveAttribute($attribute)
-    { return $this->activeOptions[$attribute];
+    { 
+        return $this->activeOptions()[$attribute];
     }
     public function scopeActive($query)
     {
@@ -37,9 +38,11 @@ class Customer extends Model
     public function activeOptions()
     {
         return [
-            0 => 'Inactive',
             1 => 'Active',
-        ]
+            0 => 'Inactive',    
+            2 => 'In-Progress',
+        ];
     }
+    
 
 }
